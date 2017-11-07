@@ -1,0 +1,85 @@
+<html ng-app="auth">
+
+<head>
+    <title>Chat_App</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/auth.css">
+</head>
+
+<body ng-controller="auth">
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="" alt="">
+            </div>
+
+            <div class="item">
+                <img src="" alt="">
+            </div>
+
+            <div class="item">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container index">
+
+        <div ng-hide="LoginBox" class="login box-container">
+
+            <div class="heading">
+                <h2 class="login-heading">Login</h2>
+            </div>
+
+
+            <div class="input-group username-group">
+                <span class="input-group-addon iconbg">
+					<i class="glyphicon glyphicon-user"></i>
+		  		</span>
+                <input id="login-username" type="text" ng-model="username" class="form-control inputbg" name="username" value="" placeholder="username or email">
+            </div>
+
+
+            <div class="input-group password-group">
+                <span class="input-group-addon iconbg">
+					<i class="glyphicon glyphicon-lock"></i>
+		  		</span>
+                <input id="login-password" type="password" ng-model="password" class="form-control inputbg" name="password" placeholder="password">
+            </div>
+
+
+            <div class="alert-group" ng-hide="LoginAlert">
+                <div class="alert alert-danger">
+                    Wrong Username and Password combination
+                </div>
+            </div>
+
+
+            <div class="input-group">
+                <button ng-click="login()" id="btn-login" class="btn btn-login btnbg">
+					Login 
+				</button>
+            </div>
+
+
+            <div class="signup-box">
+                <h4>Don't have an account ?
+                    <u><span ng-click="toggle_register()"></span>
+                        <a href="auth-register.html">
+                            <p>Sign Up Now</p>
+                        </a>
+                    </u>
+                </h4>
+            </div>
+        </div>
+
+        <script src="public/js/angular.min.js"></script>
+        <script src="Client/auth.js"></script>
+        <script src="public/js/jquery.min.js"></script>
+        <script src="public/js/bootstrap.min.js"></script>
+</body>
+
+</html>
