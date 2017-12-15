@@ -53,7 +53,8 @@ app.controller('auth', function ($scope, $http, $window) {
         }
 
         $http.post('/register', data).then(function (data, status) {
-            if (data.is_logged) {
+            //alert(JSON.stringify(data))
+            if (data.data.is_logged) {
                 $scope.LoginAlert = true;
                 alert("hello")
                 //$window.location.href = "/home#?id=" + data.id;

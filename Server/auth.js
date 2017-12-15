@@ -151,7 +151,7 @@ function routing(app, connection, sessionInfo) {
                 };
             }
             console.log(result_send.is_logged)
-            console.log(sessionInfo.uid)
+            console.log(result_send.id)
 
             res.write(JSON.stringify(result_send));
             res.end();
