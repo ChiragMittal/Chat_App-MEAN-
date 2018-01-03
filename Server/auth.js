@@ -26,7 +26,7 @@ function routing(app, connection, sessionInfo) {
 
     app.get('/login', function (req, res) {
         res.sendFile(path.join(__dirname + '/../auth-login.html'));
-    })
+    });
 
     app.get('/login', function (req, res) {
 
